@@ -1,13 +1,3 @@
-// const employee1 = new Employee('johndoe2022', 'John Doe', 'jdoe2022@gmail.com', '123456', '01/01/2020', 100000, 'Developer', 8);
-// const employee2 = new Employee('jamesdoe2023', 'James Doe', 'jamesdoe2023@gmail.com', '965114', '05/01/2020', 78000, 'FE Developer', 11);
-// const employee1 = new Employee('johndoe2022', 'John Doe', 'jdoe2022@gmail.com', '123456', '01/01/2020', '100000', '0', '192');
-// const employee2 = new Employee('jamesdoe2023', 'James Doe', 'jamesdoe2023@gmail.com', '965114', '05/01/2020', '78000', '1', '11');
-// console.log(employee1.getTotalSalary());
-// console.log(employee2.getTotalSalary());
-// console.log(employee1.getConduct());
-
-
-
 // read company from local storage
 const getCompanyFromLocalStorage = () => {
     let company = JSON.parse(localStorage.getItem('company'));

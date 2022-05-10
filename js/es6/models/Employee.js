@@ -1,14 +1,3 @@
-/*
-    email: "tminh.dev@gmail.com"
-    fullname: "Minh Nguyen"
-    hoursOfWork: 150
-    password: "123456.Mi"
-    position: "1"
-    salary: 1000000
-    startDate: "05/07/2022"
-    username: "mnguy"
-*/
-
 class Employee {
     constructor(username, fullname, email, password, startDate, salary, position, hoursOfWork) {
         this.username = username;
