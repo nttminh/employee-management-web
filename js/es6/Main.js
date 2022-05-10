@@ -26,7 +26,7 @@ const writeCompanyToLocalStorage = () => {
     localStorage.setItem('company', JSON.stringify(company));
 }
 
-const company = getCompanyFromLocalStorage();
+let company = getCompanyFromLocalStorage();
 
 
 
@@ -122,12 +122,25 @@ handleUpdateModal = () => {
     $('#btnThem').click();
 }
 
+handleSearchStudents = (event) => {
+    if (event.keyCode === 13) {
+        let inputValue = $('#searchName').val();
+        let employees = company.getEmployeesByConduct(inputValue);
+        renderEmployees(employees);
+    }
+}
+
+
 // ----------------- Render -----------------
-renderEmployees = () => {
-    let company = getCompanyFromLocalStorage();
+renderEmployees = (emp) => {
+    let employees = emp;
+    if (!employees) {
+        company = getCompanyFromLocalStorage();
+        employees = company.employees;
+    }
 
     let html = '';
-    company.employees.forEach(employee => {
+    employees.forEach(employee => {
         html += `
             <tr>
                 <td>${employee.username}</td>

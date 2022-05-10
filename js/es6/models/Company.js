@@ -32,6 +32,12 @@ class Company {
         return this.employees.filter(e => e.fullname.includes(fullname));
     }
 
+    // find employees by conduct
+    getEmployeesByConduct(conduct) {
+        conduct = conduct.toLowerCase();
+        return this.employees.filter(e => e.getConduct().toLowerCase().includes(conduct));
+    }
+
     // delete employee by username
     deleteEmployeeByUsername(username) {
         let index = this.getIndexOfEmployeeByUsername(username);
